@@ -2,78 +2,76 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>chranababy 💖</title>
   <style>
-    /* fundal video */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      background-color: #111;
+    }
     #bg-video {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
       object-fit: cover;
       z-index: -1;
     }
-
-    /* restul design-ului */
-    body {
-      background-color: #111;
-      color: #fff;
-      font-family: 'Arial', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+    .content {
+      position: relative;
+      z-index: 1;
       text-align: center;
       padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
     }
-
     h1 {
       font-size: 2.5em;
       margin-bottom: 30px;
     }
-
     a {
       display: block;
-      margin: 12px 0;
+      margin: 12px auto;
       padding: 15px 25px;
+      max-width: 300px;
       color: white;
       background-color: #ff0066;
-      border: none;
       border-radius: 8px;
       text-decoration: none;
       font-size: 1.1em;
       transition: background 0.3s;
     }
-
     a:hover {
       background-color: #ff3399;
     }
-
     .footer {
-      margin-top: 40px;
+      margin-top: auto;
       font-size: 0.9em;
       color: #aaa;
     }
   </style>
 </head>
 <body>
-
-  <!-- 🎥 fundal video -->
-  <video autoplay muted loop id="bg-video">
-    <source src="bgvideo.mp4" type="video/mp4">
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="background.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
   </video>
-
-  <h1>welcome to ur favorite world! 😈</h1>
-
-  <a href="https://fansly.com/chranababy" target="_blank">Customs Requests, Calls & Panties 😈</a>
-  <a href="https://onlyfans.com/missbabe" target="_blank">Exclusive Content 🌶️💦</a>
-  <a href="https://www.paypal.me/meowgimmeurmoney" target="_blank">Spoil Me 💸</a>
-  <a href="https://kick.com/chranababy" target="_blank">Live Streaming 🎥</a>
-  <a href="mailto:chranababy@gmail.com">Gmail – Brand Collabs 💼</a>
-
-  <div class="footer">© chranababy.com</div>
-
+  <div class="content">
+    <h1>welcome to ur favorite world! 😈</h1>
+    <a href="https://fansly.com/chranababy" target="_blank" rel="noopener noreferrer">Customs Requests, Calls & Panties 😈</a>
+    <a href="https://onlyfans.com/missbabe" target="_blank" rel="noopener noreferrer">Exclusive Content 🌶️💦</a>
+    <a href="https://www.paypal.me/meowgimmeurmoney" target="_blank" rel="noopener noreferrer">Spoil Me 💸</a>
+    <a href="https://kick.com/chranababy" target="_blank" rel="noopener noreferrer">Live Streaming 🎥</a>
+    <a href="mailto:chranababy@gmail.com">Gmail – Brand Collabs 💼</a>
+    <div class="footer">© chranababy.com</div>
+  </div>
 </body>
 </html>
