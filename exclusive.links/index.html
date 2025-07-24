@@ -46,11 +46,33 @@
       background: #e60073;
     }
   </style>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZCMY9K9K16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-ZCMY9K9K16');
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('[data-gtag-event]').forEach(link => {
+      link.addEventListener('click', () => {
+        const eventName = link.getAttribute('data-gtag-event');
+        gtag('event', eventName, {
+          event_category: 'link',
+          event_label: link.href
+        });
+      });
+    });
+  });
+</script>
 </head>
 <body>
   <h1>you're one step away... 😈</h1>
 
-  <a class="btn" href="https://onlyfans.com/missbabe" target="_blank">💙Only🤍</a>
-  <a class="btn" href="https://fansly.com/chranababy" target="_blank">Fansly - Customs & Calls 🌶️💦</a>
+<a href="https://onlyfans.com/missbabe" target="_blank" data-gtag-event="onlyfans_click" class="btn">💙Only🤍</a>
+<a href="https://fansly.com/chranababy" target="_blank" data-gtag-event="fansly_click" class="btn">Fansly - Customs & Calls 🌶️💦</a>
 </body>
 </html>
