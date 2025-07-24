@@ -60,14 +60,27 @@ a:hover {
     border: 3px solid #fff;
   }
 </style>
-  <!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZCMY9K9K16"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-ZCMY9K9K16');
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('[data-gtag-event]').forEach(link => {
+      link.addEventListener('click', () => {
+        const eventName = link.getAttribute('data-gtag-event');
+        gtag('event', eventName, {
+          event_category: 'link',
+          event_label: link.href
+        });
+      });
+    });
+  });
 </script>
 </head>
   <body oncontextmenu="return false;">
@@ -76,10 +89,10 @@ a:hover {
   </video>
   <div class="content">
   <img src="me_pic.JPG" alt="chranababy" class="profile-pic" oncontextmenu="return false;" draggable="false" />
-    <a href="https://chranababy.com/exclusive.links" target="_blank">Exclusive Content 🌶️💦</a>
-    <a href="https://www.paypal.me/meowgimmeurmoney" target="_blank">Spoil Me 💸</a>
-    <a href="https://kick.com/chranababy" target="_blank">Live Streaming 🎥</a>
-    <a href="mailto:chranababy@gmail.com">Brand Collabs 💼</a>
+<a href="https://chranababy.com/exclusive.links" target="_blank" data-gtag-event="exclusive_content">Exclusive Content 🌶️💦</a>
+<a href="https://www.paypal.me/meowgimmeurmoney" target="_blank" data-gtag-event="paypal_donation">Spoil Me 💸</a>
+<a href="https://kick.com/chranababy" target="_blank" data-gtag-event="kick_stream">Live Streaming 🎥</a>
+<a href="mailto:chranababy@gmail.com" data-gtag-event="email_collab">Brand Collabs 💼</a>
     <div class="footer">© chranababy.com</div>
   </div>
 </body>
