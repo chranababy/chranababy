@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>exclusive links 💦</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #fff;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      display: block;
+      width: 250px;
+      padding: 15px;
+      margin: 10px;
+      background: #ff007f;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      background: #e60073;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>welcome to ur favorite world 😈</h1>
+
+  <!-- Butonul principal -->
+  <button class="btn" onclick="toggleLinks()">💦 spicy links</button>
+
+  <!-- Butoanele ascunse inițial -->
+  <div id="spicy-links" class="hidden">
+    <a class="btn" href="https://onlyfans.com/chrana" target="_blank">💖 OnlyFans</a>
+    <a class="btn" href="https://fansly.com/chrana" target="_blank">💙 Fansly</a>
+  </div>
+
+  <script>
+    function toggleLinks() {
+      const links = document.getElementById('spicy-links');
+      links.classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>
