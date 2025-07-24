@@ -24,19 +24,22 @@
       text-align: center;
     }
 
-    .btn {
-      display: block;
-      width: 220px;
-      padding: 14px;
-      margin: 10px;
-      background: #ff007f;
-      color: white;
-      text-align: center;
-      text-decoration: none;
-      font-size: 1rem;
-      border-radius: 10px;
-      transition: 0.2s ease-in-out;
-    }
+   .btn {
+  display: block;
+  width: 340px; /* ← mărit */
+  padding: 16px;
+  margin: 10px;
+  background: #ff007f;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  white-space: nowrap; /* ← NU lasă textul pe 2 rânduri */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: 0.2s ease-in-out;
+}
 
     .btn:hover {
       background: #e60073;
