@@ -10,12 +10,8 @@
     margin: 0; padding: 0; height: 100%;
     overflow: hidden;
   }
-  #bg-video {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    object-fit: cover;
-    z-index: -1;
+  body {
+    background: #135991 url("ocean-background.jpg") center / cover no-repeat fixed;
   }
  .content {
   position: relative;
@@ -86,9 +82,6 @@
 </script>
 </head>
   <body oncontextmenu="return false;">
-  <video autoplay muted loop playsinline id="bg-video">
-    <source src="background.mp4" type="video/mp4" />
-  </video>
   <div class="content">
   <img src="me_pict.jpg" alt="chranababy" class="profile-pic" oncontextmenu="return false;" draggable="false" />
 <a href="https://link.me/chrana" target="_blank" data-gtag-event="fansly_click" class="btn">CLICK HERE 😈</a>
