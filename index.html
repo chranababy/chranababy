@@ -3,89 +3,18 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; form-action 'none'; style-src 'self'; script-src 'self' https://www.googletagmanager.com; img-src 'self' https://www.googletagmanager.com https://*.google-analytics.com; connect-src https://www.googletagmanager.com https://*.google-analytics.com https://*.google.com; upgrade-insecure-requests">
 <title>ChranaBaby</title>
   <link rel="icon" type="image/png" href="favicon.png" />
-<style>
-  body, html {
-    margin: 0; padding: 0; height: 100%;
-    overflow: hidden;
-  }
-  body {
-    background: #135991 url("ocean-background.jpg") center / cover no-repeat fixed;
-  }
- .content {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  padding-top: 50px;
-}
-.btn {
-  display: block;
-  width: 100%;
-  max-width: 300px;
-  font-family: Verdana, sans-serif;
-  color: #00aff0;
-  background-color: #fff;
-  box-shadow: 0 0 16px rgba(255, 255, 255, 0.8);
-  padding: 14px 28px;
-  margin: 0;
-  border: none;
-  border-radius: 50px;
-  text-decoration: none;
-  font-size: 1em;
-  font-weight: bold;
-  text-align: center; 
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #f0fbff;
-}
-   .footer {
-    margin-top: 100px;
-    font-size: 0.9em;
-    color: #ccc;
-  }
-
-  .profile-pic {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-    border: 3px solid #fff;
-  }
-</style>
+<link rel="stylesheet" href="site.css">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZCMY9K9K16"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-ZCMY9K9K16');
-</script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('[data-gtag-event]').forEach(link => {
-      link.addEventListener('click', () => {
-        const eventName = link.getAttribute('data-gtag-event');
-        gtag('event', eventName, {
-          event_category: 'link',
-          event_label: link.href
-        });
-      });
-    });
-  });
-</script>
+<script defer src="analytics.js"></script>
 </head>
-  <body oncontextmenu="return false;">
+  <body>
   <div class="content">
-  <img src="anime-profile.jpg" alt="chranababy" class="profile-pic" oncontextmenu="return false;" draggable="false" />
-<a href="/go/" target="_blank" rel="noopener" data-gtag-event="onlyfans_click" class="btn">CLICK HERE 🤍💙</a>
+  <img src="anime-profile.jpg" alt="chranababy" class="profile-pic" draggable="false" />
+<a href="/go/" target="_blank" rel="noopener noreferrer" data-gtag-event="onlyfans_click" class="btn">CLICK HERE 🤍💙</a>
     <div class="footer">© chranababy.com</div>
   </div>
 </body>
