@@ -85,48 +85,8 @@
   <body oncontextmenu="return false;">
   <div class="content">
   <img src="anime-profile.jpg" alt="chranababy" class="profile-pic" oncontextmenu="return false;" draggable="false" />
-<a href="https://www.instagram.com/bby.chrana/" target="_blank" rel="noopener" id="instagram-profile" data-gtag-event="instagram_click" class="btn">CLICK HERE 🤍💙</a>
+<a href="https://onlyfans.com/missbabe" target="_blank" rel="noopener" data-gtag-event="onlyfans_click" class="btn">CLICK HERE 🤍💙</a>
     <div class="footer">© chranababy.com</div>
   </div>
-<script>
-  const instagramProfile = document.getElementById('instagram-profile');
-
-  instagramProfile.addEventListener('click', (event) => {
-    if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-
-    const profileUrl = instagramProfile.href;
-    const username = instagramProfile.pathname.split('/')[1];
-    const userAgent = navigator.userAgent;
-
-    if (/Android/i.test(userAgent)) {
-      event.preventDefault();
-      const fallback = encodeURIComponent(profileUrl);
-      window.location.href = `intent://${instagramProfile.host}${instagramProfile.pathname}#Intent;scheme=https;package=com.instagram.android;S.browser_fallback_url=${fallback};end`;
-      return;
-    }
-
-    if (/iPhone|iPad|iPod/i.test(userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) {
-      event.preventDefault();
-
-      const clearFallback = () => {
-        window.clearTimeout(fallback);
-        document.removeEventListener('visibilitychange', onVisibilityChange);
-        window.removeEventListener('pagehide', clearFallback);
-      };
-      const onVisibilityChange = () => {
-        if (document.hidden) clearFallback();
-      };
-      const fallback = window.setTimeout(() => {
-        const isVisible = !document.hidden;
-        clearFallback();
-        if (isVisible) window.location.href = profileUrl;
-      }, 1800);
-
-      document.addEventListener('visibilitychange', onVisibilityChange);
-      window.addEventListener('pagehide', clearFallback);
-      window.location.href = `instagram://user?username=${encodeURIComponent(username)}`;
-    }
-  });
-</script>
 </body>
 </html>
